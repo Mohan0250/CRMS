@@ -16,9 +16,9 @@ export default function ContactPage() {
     setIsSending(true);
 
     // Replace these with your actual EmailJS credentials in the future
-    const SERVICE_ID = 'service_oo9lnmj';
-    const TEMPLATE_ID = 'template_7ryqcox';
-    const PUBLIC_KEY = 't7wXzHIv_WWhHlbu4';
+    const SERVICE_ID = 'service_7bb8txd';
+    const TEMPLATE_ID = 'template_fk8fhtf';
+    const PUBLIC_KEY = 'gssp1k6g7WEOffwO7';
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then((result) => {
@@ -35,7 +35,7 @@ export default function ContactPage() {
   };
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
@@ -51,9 +51,9 @@ export default function ContactPage() {
           <form ref={form} onSubmit={sendEmail} className="space-y-6">
             <div className="space-y-2">
               <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Full Name</label>
-              <input 
+              <input
                 required
-                type="text" 
+                type="text"
                 name="user_name"
                 placeholder="John Doe"
                 className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-3 text-sm focus:ring-4 focus:ring-black/5 focus:border-black transition-all outline-none placeholder:text-gray-300"
@@ -62,9 +62,9 @@ export default function ContactPage() {
 
             <div className="space-y-2">
               <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Email Address</label>
-              <input 
+              <input
                 required
-                type="email" 
+                type="email"
                 name="user_email"
                 placeholder="john@example.com"
                 className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-3 text-sm focus:ring-4 focus:ring-black/5 focus:border-black transition-all outline-none placeholder:text-gray-300"
@@ -73,9 +73,9 @@ export default function ContactPage() {
 
             <div className="space-y-2">
               <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Subject</label>
-              <input 
+              <input
                 required
-                type="text" 
+                type="text"
                 name="subject"
                 placeholder="How can we help?"
                 className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-3 text-sm focus:ring-4 focus:ring-black/5 focus:border-black transition-all outline-none placeholder:text-gray-300"
@@ -84,7 +84,7 @@ export default function ContactPage() {
 
             <div className="space-y-2">
               <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Message</label>
-              <textarea 
+              <textarea
                 required
                 name="message"
                 rows={5}
@@ -93,7 +93,7 @@ export default function ContactPage() {
               />
             </div>
 
-            <button 
+            <button
               disabled={isSending}
               type="submit"
               className="w-full bg-black text-white rounded-2xl py-4 font-bold text-sm flex items-center justify-center gap-2 hover:bg-gray-900 transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed group shadow-lg shadow-black/10"
