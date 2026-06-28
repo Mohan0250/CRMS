@@ -1,3 +1,11 @@
+# CRM System
+
+## Live Demo
+https://crms-amber.vercel.app/
+
+## GitHub Repository
+https://github.com/Mohan0250/CRMS
+
 # Nexus CRM 🚀
 
 An AI-powered CRM designed for small teams and freelancers to manage leads, sales pipelines, and tasks with intelligent insights.
